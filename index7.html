@@ -10,34 +10,32 @@
   </style>
 </head>
 <body>
-  <header>div1
-    <h1>h1</h1>
-    <a href=""></a>
-    <p id="p2"></p>
-    <h2>h2</h2>
-    <h2>h2</h2>
-    <div>div
 
-      <p id="p1">p</p>
-    </div>
-    <div>div</div>
-    <div>div</div>
-    <div>div</div>
-    <div>div</div>
-    <p>p</p>
-    <p>p</p>
-    <p>p</p>
-    <p>p</p>
+  <button>button</button>
+
+  <!-- <input type="text" name="a" id="" value="1">
+  <input type="text" name="b" id="" value="2">
+  <input type="text" name="c" id="" value="3"> -->
 
 
 
-
-
-  </header>
-  <h2>h2</h2>
-  <h2>h2</h2>
-  <h2>h2</h2>
-  <h3></h3>
+  <!-- <div>div</div>
+  <span>span</span>
+  <p>p</p>
+  <ul>
+    <li>li</li>
+    <li>li</li>
+    <li>li</li>
+    <li>li</li>
+    <li>li</li>
+  </ul> -->
+  <!-- <div>div
+    <span>divspan</span>
+  </div>
+  <span>span</span>
+  <span>span</span>
+  <span>span</span>
+  <span>span</span> -->
 
 
   <!-- <div id="div3"><em>em</em>div<strong>strong</strong></div> -->
@@ -52,6 +50,50 @@
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 
   <script>
+    $(function(){
+      $('button').click(function(e){
+        // console.log(e.type);
+        // console.log(e.target);
+        alert(e.type);
+        alert(e.target);
+      })
+    })
+
+
+
+    // $(function(){
+      //serialize()將我們表單中的name和value，拼接成querystring(查詢字符串)
+      // console.log($('input').serialize())
+      //serializeArray()將我們表單中的name作為key和value作為值，拼接成Array
+    //   console.log($('input').serializeArray())
+    // })
+
+
+
+
+    // $(function(){
+      // $('div').add('p').add('ul li')
+      // $('div,p,ul li')
+      // .css('backgroundColor','red')
+      // .click(function(){alert('hello')})
+      // .mouseover(function(){$(this).css('backgroundColor', 'orange')})
+      // .mouseout(function(){$(this).css('backgroundColor', 'blue')})    
+      // })
+
+
+    // $(function(){
+      //每一個獲取到的節點，單獨包裝
+      // $('span').wrap('<p class = "box">ppp</p>')
+      //整體包裝
+      // $('span').wrapAll('<p class = "box">ppp</p>')
+      //內部包裝
+      // $('span').wrapInner('<p class = "box">ppp</p>')
+      //現除包裝
+      // $('span').unwrap()
+    // })
+
+
+
     // $(function(){
       // $('#p1').siblings('h2').css('backgroundColor','blue')
       // $('#p1').next().css('backgroundColor','blue')
@@ -60,6 +102,9 @@
       // $('#p1').prevAll().css('backgroundColor','blue')
       // $('#p1').prevUntil('h1').css('backgroundColor','blue')
       // $('#p1').parent().css('backgroundColor','blue')
+      // $('#div3').parents().css('backgroundColor','blue')
+      //必須傳入參數，參數也是選擇器，只獲取第一個符合條件的元素，從自己開始查找
+      // $('#div3').closest('.box').css('backgroundColor','blue')
     // })
 
 
@@ -99,11 +144,18 @@
     //       $(this).css('backgroundColor', 'blue')
     //     })
 
-    //   $('button').click(function(){
-    //     // var node = $('#div1').remove();
-    //     var node = $('#div1').detach();
-    //     node.appendTo($('#div2'))
-    //   })
+      // $('button').click(function(){
+        // var node = $('#div1').remove();
+        //clone繁殖，復製
+        //clone()只會復製節點本身 並不會復製元素節點的行為和事件
+        // var node = $('#div1').clone();
+        //clone(true)會復製節點本身，還會復製元素節點的行為和事件
+        // var node = $('#div1').clone(true);
+        // node.appendTo($('#div2'))
+        //detach分開
+        // var node = $('#div1').detach();
+        // node.appendTo($('#div2'))
+      // })
     // })
 
 
